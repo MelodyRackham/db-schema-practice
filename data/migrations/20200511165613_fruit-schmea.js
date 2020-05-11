@@ -4,7 +4,7 @@ exports.up = function (knex) {
     // define the schema 
     return knex.schema.createTable('fruits', tbl => {
         tbl.increments();
-        tbl.text('name', 128).unique().notNullable();
+        tbl.string('name', 128).unique().notNullable();
         tbl.decimal('avgWeightOz');
         tbl.boolean('delicious');
     })

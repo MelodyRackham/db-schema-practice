@@ -8,4 +8,9 @@ knex init command runs a knex file for us!
 
 development, staging, and production in knexfile.js are each config objects. 
 
-create a migration --> knex migrate:make table-name
+Create a migration --> knex migrate:make table-name
+
+To run a migration: knex migrate:latest 
+
+Example Scenario: Ran a migration, realized we forgot to add a constraint --> edit the file, knex migrate:rollback (runs the down function from our knexfile) THEN run knex migrate:latest
+
